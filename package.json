@@ -13,6 +13,7 @@
   "dependencies": {
     "cross-env": "^5.2.0",
     "nuxt": "^2.0.0",
+    "vue-pure-lightbox": "^2.1.6",
     "vuetify": "^1.2.4"
   },
   "devDependencies": {

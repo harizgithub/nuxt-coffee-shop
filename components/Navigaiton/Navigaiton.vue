@@ -8,6 +8,7 @@
     <v-toolbar-items class="hidden-sm-and-down">
       <v-btn flat href="/">Home</v-btn>
       <v-btn flat href="/ourbrews">Our Brews</v-btn>
+      <v-btn flat href="/gallery">Gallery</v-btn>
     </v-toolbar-items>
   </v-toolbar>  
   <!-- Navigation Drawer -->
@@ -48,7 +49,7 @@
         items: [
           { title: 'Home', icon: 'home',  to:"/" },
           { title: 'Our Brews', icon: 'free_breakfast', to:"/ourbrews" },
-          { title: 'Admin', icon: 'gavel', to:"/" }
+          { title: 'Gallery', icon: 'gavel', to:"/gallery" }
         ]
       }
     }
