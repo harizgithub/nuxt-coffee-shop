@@ -29,4 +29,12 @@
     font-family: 'Montserrat', sans-serif !important;
   }
 
+  @media only screen and (max-width: 600px)  {
+    a {
+      font-size: 1.2em !important;
+    }
+    .v-icon {
+      font-size: 1.2em !important;
+    }
+  }
 </style>

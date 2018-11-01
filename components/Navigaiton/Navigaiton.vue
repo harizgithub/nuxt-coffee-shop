@@ -1,5 +1,6 @@
 <template>
 <div id="navigation">
+  
   <!--Navigation Toolbar-->
   <v-toolbar>
     <v-toolbar-side-icon class="hidden-md-and-up" @click="drawer = !drawer" />
@@ -9,6 +10,7 @@
       <v-btn flat href="/">Home</v-btn>
       <v-btn flat href="/ourbrews">Our Brews</v-btn>
       <v-btn flat href="/gallery">Gallery</v-btn>
+      <v-btn flat href="/contact">Contact</v-btn>
     </v-toolbar-items>
   </v-toolbar>  
   <!-- Navigation Drawer -->
@@ -46,12 +48,14 @@
       return {
         // use this value to connect drawer icon to toggler
         drawer: false,
+        scrolled:false,
         items: [
           { title: 'Home', icon: 'home',  to:"/" },
           { title: 'Our Brews', icon: 'free_breakfast', to:"/ourbrews" },
-          { title: 'Gallery', icon: 'gavel', to:"/gallery" }
+          { title: 'Gallery', icon: 'insert_photo', to:"/gallery" },
+          { title: 'Contact', icon: 'perm_contact_calendar', to:"/contact" }
         ]
       }
-    }
+    }   
   }
 </script>
