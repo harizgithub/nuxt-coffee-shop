@@ -1,8 +1,12 @@
-const pkg = require('./package')
+const pkg = require('./package'),
+routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
+  router: {
+    base: '/nuxt-coffee-shop/'
+  }
+} : {}
 
 module.exports = {
   mode: 'universal',
-
   /*
   ** Headers of the page
   */
@@ -49,6 +53,7 @@ module.exports = {
   /*
   ** Build configuration
   */
+  ...routerBase,
   build: {
     /*
     ** You can extend webpack config here
@@ -56,7 +61,5 @@ module.exports = {
     extend(config, ctx) {
       
     }
-  },
-  router: { base: '/coffee_shop_nuxt/' },
-
+  }
 }

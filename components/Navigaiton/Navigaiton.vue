@@ -7,10 +7,10 @@
     <v-toolbar-title>Coffee Shop</v-toolbar-title>
     <v-spacer></v-spacer>
     <v-toolbar-items class="hidden-sm-and-down">
-      <v-btn flat href="/">Home</v-btn>
-      <v-btn flat href="/ourbrews">Our Brews</v-btn>
-      <v-btn flat href="/gallery">Gallery</v-btn>
-      <v-btn flat href="/contact">Contact</v-btn>
+      <v-btn primary flat nuxt to="/">Home</v-btn>
+      <v-btn primary flat nuxt to="/ourbrews">Our Brews</v-btn>
+      <v-btn primary flat nuxt to="/gallery">Gallery</v-btn>
+      <v-btn primary flat nuxt to="/contact">Contact</v-btn>
     </v-toolbar-items>
   </v-toolbar>  
   <!-- Navigation Drawer -->
