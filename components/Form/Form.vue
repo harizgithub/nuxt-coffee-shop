@@ -1,51 +1,19 @@
 <template>
-    <v-container>
-         <v-form ref="form" v-model="valid" lazy-validation>
-    <v-text-field
-      v-model="name"
-      :rules="nameRules"
-      :counter="10"
-      label="Name"
-      required
-    ></v-text-field>
-    <v-text-field
-      v-model="email"
-      :rules="emailRules"
-      label="E-mail"
-      required
-    ></v-text-field>
-    <v-text-field
-      v-model="phone"
-      :rules="phoneRules"
-      label="Phone"
-      required
-    ></v-text-field>
-    <v-select
-      v-model="select"
-      :items="items"
-      :rules="[v => !!v || 'Item is required']"
-      label="Reason to Contact"
-      required
-    ></v-select>
-    <v-text-field
-      v-model="message"
-      :rules="text"
-      label="Message"
-      required
-    ></v-text-field>
+  <v-container>
+    <v-form ref="form" v-model="valid" lazy-validation>
+      <v-text-field v-model="name" :rules="nameRules" :counter="10" label="Name" required></v-text-field>
+      <v-text-field v-model="email" :rules="emailRules" label="E-mail" required></v-text-field>
+      <v-text-field v-model="phone" :rules="phoneRules" label="Phone" required></v-text-field>
+      <v-select v-model="select" :items="items" :rules="[v => !!v || 'Item is required']" label="Reason to Contact"
+        required></v-select>
+      <v-text-field v-model="message" :rules="text" label="Message" required></v-text-field>
 
-    <v-btn
-        color="green"
-      :disabled="!valid"
-      @click="submit"
-    >
-      submit
-    </v-btn>
-    <v-btn 
-    flat
-    @click="clear">clear</v-btn>
-  </v-form>
-    </v-container>
+      <v-btn color="green" :disabled="!valid" @click="submit">
+        submit
+      </v-btn>
+      <v-btn flat @click="clear">clear</v-btn>
+    </v-form>
+  </v-container>
 </template>
 
 <script>
@@ -74,7 +42,7 @@
     }),
 
     methods: {
-      submit () {
+      submit() {
         if (this.$refs.form.validate()) {
           // Native form submission is not yet supported
           axios.post('/api/submit', {
@@ -84,9 +52,10 @@
           })
         }
       },
-      clear () {
+      clear() {
         this.$refs.form.reset()
       }
     }
   }
+
 </script>

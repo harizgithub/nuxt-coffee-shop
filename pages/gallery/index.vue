@@ -2,7 +2,7 @@
   <div id="gallery">
     <v-container grid-list-md text-xs-center>
       <v-layout row wrap fill-height>
-        <v-flex lg4> 
+        <v-flex lg4 md-6> 
           <no-ssr>
             <lightbox thumbnail="https://images.unsplash.com/photo-1515678916313-2263ebfad5cb?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a9bfa500366ccc943337ce0aa8b80809&auto=format&fit=crop&w=1350&q=80"
               :images="['https://images.unsplash.com/photo-1515678916313-2263ebfad5cb?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a9bfa500366ccc943337ce0aa8b80809&auto=format&fit=crop&w=1350&q=80']"></lightbox>
@@ -12,7 +12,7 @@
               :images="['https://images.unsplash.com/photo-1532618403260-5aeffed45f6e?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a8aa283fd0f0a9496c42acd56bd42c04&auto=format&fit=crop&w=1351&q=80']"></lightbox>
           </no-ssr>
         </v-flex>
-        <v-flex lg4>
+        <v-flex lg4 md-6>
           <no-ssr>
             <lightbox thumbnail="https://images.unsplash.com/photo-1525648199074-cee30ba79a4a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=be7af92635ae8a25f83c7cd27f91a701&auto=format&fit=crop&w=1350&q=80"
               :images="['https://images.unsplash.com/photo-1525648199074-cee30ba79a4a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=be7af92635ae8a25f83c7cd27f91a701&auto=format&fit=crop&w=1350&q=80']"></lightbox>
@@ -24,7 +24,7 @@
               :images="['']"></lightbox>
           </no-ssr>
         </v-flex>
-        <v-flex lg4>
+        <v-flex lg4 md-6>
           <no-ssr>
             <lightbox thumbnail="https://images.unsplash.com/photo-1432860560641-49d2a6156b81?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=f1dcdc74f8137f3511ffb4ee1a6f4fe0&auto=format&fit=crop&w=1351&q=80"
               :images="['https://images.unsplash.com/photo-1432860560641-49d2a6156b81?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=f1dcdc74f8137f3511ffb4ee1a6f4fe0&auto=format&fit=crop&w=1351&q=80']"></lightbox>
