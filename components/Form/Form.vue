@@ -1,17 +1,15 @@
 <template>
   <v-container>
-    <v-form ref="form" v-model="valid" lazy-validation>
+    <v-form v-model="valid">
       <v-text-field v-model="name" :rules="nameRules" :counter="10" label="Name" required></v-text-field>
-      <v-text-field v-model="email" :rules="emailRules" label="E-mail" required></v-text-field>
-      <v-text-field v-model="phone" :rules="phoneRules" label="Phone" required></v-text-field>
-      <v-select v-model="select" :items="items" :rules="[v => !!v || 'Item is required']" label="Reason to Contact"
-        required></v-select>
-      <v-text-field v-model="message" :rules="text" label="Message" required></v-text-field>
-
-      <v-btn color="green" :disabled="!valid" @click="submit">
+      <v-text-field v-model="email" :rules="emailRules" label="E-Mail" required></v-text-field>
+      <v-text-field v-model="phone" label="Phone"></v-text-field>
+      <v-select v-model="select" :items="items" :rules="[v => !!v || 'Item is required']" label="Prebook" required></v-select>
+      <v-checkbox v-model="checkbox" :rules="[v => !!v || 'You must agree to continue!']" label="Do you agree?"
+        required></v-checkbox>
+      <v-btn color="green" :disabled="!valid" @click="i">
         submit
       </v-btn>
-      <v-btn flat @click="clear">clear</v-btn>
     </v-form>
   </v-container>
 </template>
@@ -21,41 +19,26 @@
 
   export default {
     data: () => ({
-      valid: true,
+      valid: false,
       name: '',
       nameRules: [
-        v => !!v || 'Name is required',
-        v => (v && v.length <= 10) || 'Name must be less than 10 characters'
+        v => !!v || 'name is required',
+        v => v.length <= 10 || 'name must be less than 10 characters'
       ],
       email: '',
       emailRules: [
         v => !!v || 'E-mail is required',
-        v => /.+@.+/.test(v) || 'E-mail must be valid'
+        v => /.+@.+/.test(v) || 'E-mail Must be Vaild'
       ],
+      phone: '+1',
       select: null,
       items: [
-        'I Have Question',
-        'Business Inquiry',
-        'To Book in Advance',
+        'Prebook',
+        'Feedback',
+        'Other',
       ],
       checkbox: false
     }),
-
-    methods: {
-      submit() {
-        if (this.$refs.form.validate()) {
-          // Native form submission is not yet supported
-          axios.post('/api/submit', {
-            name: this.name,
-            email: this.email,
-            select: this.select,
-          })
-        }
-      },
-      clear() {
-        this.$refs.form.reset()
-      }
-    }
   }
 
 </script>
